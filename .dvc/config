@@ -1,0 +1,5 @@
+[core]
+    remote = azure-storage
+['remote "azure-storage"']
+    url = azure://dvc-remote
+    account_name = turkishmusicdata
