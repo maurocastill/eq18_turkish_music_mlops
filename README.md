@@ -3,13 +3,19 @@
 <a target="_blank" href="https://cookiecutter-data-science.drivendata.org/">
     <img src="https://img.shields.io/badge/CCDS-Project%20template-328F97?logo=cookiecutter" />
 </a>
-Equipo 18
 Clasificación de Emociones en Música Turca Usando Machine Learning
+
+## Equipo 18
+Ali Mateo Campos Martínez / A01796071 / a1licampos
+Mario Fonseca Martínez / A01795228 / mariofmtz15
+Miguel Ángel Hernández Núñez / A01795751 / mickyhn
+Jonatan Israel Meza Mendoza / A01275322 / Jonatana01275322
+Eder Mauricio Castillo Galindo / A01795453 / maurocastill
 
 ## Resumen del proyecto
 
 **Nombre:** Clasificación de Emociones en Música Turca
-**Propósito:**Pendiente*.
+**Propósito:** pendiente*.
 Estructura basada en **Cookiecutter Data Science**. Control de código con **Git**, control de datos con **DVC**, y almacenamiento remoto de datos en **Azure Blob Storage**.
 
 ## Project Organization
