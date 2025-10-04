@@ -1,10 +1,16 @@
-# eq18_turkish_music_mlops
+# Turkish Music Emotion
 
 <a target="_blank" href="https://cookiecutter-data-science.drivendata.org/">
     <img src="https://img.shields.io/badge/CCDS-Project%20template-328F97?logo=cookiecutter" />
 </a>
-
+Equipo 18
 Clasificación de Emociones en Música Turca Usando Machine Learning
+
+## Resumen del proyecto
+
+**Nombre:** Clasificación de Emociones en Música Turca
+**Propósito:**Pendiente*.
+Estructura basada en **Cookiecutter Data Science**. Control de código con **Git**, control de datos con **DVC**, y almacenamiento remoto de datos en **Azure Blob Storage**.
 
 ## Project Organization
 
@@ -56,6 +62,56 @@ Clasificación de Emociones en Música Turca Usando Machine Learning
     │
     └── plots.py                <- Code to create visualizations
 ```
+
+## Estructura clave del repo
+
+* `data/raw/` — datasets originales (versionados con DVC).
+* `notebooks/` — notebooks para EDA y modelado.
+* `eq18_turkish_music_mlops/` — código fuente del proyecto.
+* `.dvc/` — metadata de DVC (versionada).
+* `dvc.yaml` / `dvc.lock` — (si aplican) pipelines DVC.
+* `requirements.txt` — dependencias Python.
+* `README.md` — este archivo.
+
+## Requisitos
+
+* Python 3.13
+* virtualenv
+* Git
+* `dvc[azure]` instalado
+* `ACCOUNT_KEY` de la cuenta de Azure Storage (compartida por otro medio)
+* Nota: Este README muestra comandos para Windows
+
+## Pasos para clonar y obtener datos
+
+1. Clonar el repo:
+
+```bash
+git clone https://github.com/maurocastill/eq18_turkish_music_mlops.git
+cd eq18_turkish_music_mlops
+```
+
+2. Activar entorno e instalar dependencias:
+
+```powershell
+.\<nombre-entorno>\Scripts\Activate.ps1
+pip install -r requirements.txt
+pip install "dvc[azure]"
+```
+
+3. Configurar la key localmente (se la pasará el coordinador por otro medio):
+
+```bash
+dvc remote modify azure-storage account_key "KEY_RECIBIDA" --local
+```
+
+4. Traer los datos versionados:
+
+```bash
+dvc pull
+```
+
+Al terminar verás `data/raw/*.csv` descargados desde Azure.
 
 --------
 
