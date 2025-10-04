@@ -6,11 +6,11 @@
 Clasificación de Emociones en Música Turca Usando Machine Learning
 
 ## Equipo 18
-Ali Mateo Campos Martínez / A01796071 / a1licampos
-Mario Fonseca Martínez / A01795228 / mariofmtz15
-Miguel Ángel Hernández Núñez / A01795751 / mickyhn
-Jonatan Israel Meza Mendoza / A01275322 / Jonatana01275322
-Eder Mauricio Castillo Galindo / A01795453 / maurocastill
+- Ali Mateo Campos Martínez / A01796071 / a1licampos
+- Mario Fonseca Martínez / A01795228 / mariofmtz15
+- Miguel Ángel Hernández Núñez / A01795751 / mickyhn
+- Jonatan Israel Meza Mendoza / A01275322 / Jonatana01275322
+- Eder Mauricio Castillo Galindo / A01795453 / maurocastill
 
 ## Resumen del proyecto
 
@@ -90,28 +90,73 @@ Estructura basada en **Cookiecutter Data Science**. Control de código con **Git
 
 ## Pasos para clonar y obtener datos
 
-1. Clonar el repo:
+Este repositorio es **privado**, por lo que cada integrante debe autenticarse en GitHub antes de poder clonarlo.
+
+### 1. Generar un Personal Access Token (PAT) en GitHub
+
+1. Entra a [GitHub > Settings > Developer settings > Personal access tokens > Tokens (classic)](https://github.com/settings/tokens).
+2. Haz clic en **Generate new token (classic)**.
+3. Asigna un nombre (ej. `eq18_turkish_music_mlops`).
+4. Selecciona al menos el permiso **repo**.
+5. Crea el token y **cópialo** (se muestra solo una vez).
+
+> ⚠️ Guarda tu PAT en un lugar seguro. Este token reemplaza tu contraseña en Git.
+
+---
+
+### 2. Clonar el repositorio
+
+En una terminal (PowerShell o CMD):
 
 ```bash
 git clone https://github.com/maurocastill/eq18_turkish_music_mlops.git
 cd eq18_turkish_music_mlops
 ```
 
-2. Activar entorno e instalar dependencias:
+Cuando se pida usuario/contraseña:
 
-```powershell
-.\<nombre-entorno>\Scripts\Activate.ps1
-pip install -r requirements.txt
-pip install "dvc[azure]"
-```
+* **Usuario** = tu nombre de usuario de GitHub.
+* **Contraseña** = pega el PAT que generaste.
 
-3. Configurar la key localmente (se la pasará el coordinador por otro medio):
+---
+
+### 3. Configurar credenciales para no ingresarlas siempre (Windows recomendado)
+
+Ejecuta una vez:
 
 ```bash
-dvc remote modify azure-storage account_key "KEY_RECIBIDA" --local
+git config --global credential.helper manager
 ```
 
-4. Traer los datos versionados:
+Esto guarda tu usuario y PAT en el **Administrador de Credenciales de Windows**.
+De ahora en adelante, `git push` y `git pull` no volverán a pedir tu token.
+
+---
+
+### 4. Preparar entorno Python
+
+1. Activa el entorno virtual compartido `env-mlops-313` (o crea uno nuevo con Python 3.13).
+2. Instala dependencias:
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+### 5. Configurar acceso a datos en Azure
+
+Cada integrante debe configurar la `ACCOUNT_KEY` localmente.
+
+```bash
+dvc remote modify azure-storage account_key "AZURE_KEY" --local
+```
+
+---
+
+### 6. Descargar los datos con DVC
+
+Ejecuta:
 
 ```bash
 dvc pull
@@ -120,4 +165,3 @@ dvc pull
 Al terminar verás `data/raw/*.csv` descargados desde Azure.
 
 --------
-
