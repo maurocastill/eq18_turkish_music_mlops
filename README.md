@@ -118,6 +118,19 @@ Cuando se pida usuario/contraseña:
 * **Usuario** = tu nombre de usuario de GitHub.
 * **Contraseña** = pega el PAT que generaste.
 
+##  Flujo de trabajo en el proyecto
+
+Cada integrante del equipo debe de trabajar **en su propia rama** para asi mantener limpio el historial del proyecto y evitar problemas de integración de código.
+
+### 🧭 Guía rápida
+1. Actualiza tu rama local principal:
+   ```bash
+   git checkout main
+   git pull origin main
+   git checkout -b <nombre_de_rama>
+   
+   *ejemplo: mariofonsecabranch*
+
 ---
 
 ### 3. Configurar credenciales para no ingresarlas siempre (Windows recomendado)
@@ -151,6 +164,16 @@ Cada integrante debe configurar la `ACCOUNT_KEY` localmente.
 ```bash
 dvc remote modify azure-storage account_key "AZURE_KEY" --local
 ```
+
+---
+
+### 6. Crear cuenta en Azure
+
+Cada integrante debe crear una cuenta en azure
+
+https://azure.microsoft.com/en-us/free/students?icid=portal
+
+Nota: Necesitarán descargar la app de Authenticator de Microsoft en su telefono
 
 ---
 
