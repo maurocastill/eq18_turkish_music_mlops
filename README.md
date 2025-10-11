@@ -181,16 +181,6 @@ dvc remote modify azure-storage account_key "AZURE_KEY" --local
 
 ---
 
-### 6. Crear cuenta en Azure
-
-Cada integrante debe crear una cuenta en azure
-
-https://azure.microsoft.com/en-us/free/students?icid=portal
-
-Nota: Necesitarán descargar la app de Authenticator de Microsoft en su telefono
-
----
-
 ### 6. Descargar los datos con DVC
 
 Ejecuta:
@@ -203,7 +193,7 @@ Al terminar verás `data/raw/*.csv` descargados desde Azure.
 
 --------
 
-### 6. Agregar datos a DVC
+### 7. Agregar datos a DVC
 
 Ejecuta:
 
