@@ -107,7 +107,7 @@ Este repositorio es **privado**, por lo que cada integrante debe autenticarse en
 ### 2. Clonar el repositorio
 
 En una terminal (PowerShell o CMD):
-
+ 
 ```bash
 git clone https://github.com/maurocastill/eq18_turkish_music_mlops.git
 cd eq18_turkish_music_mlops
@@ -122,7 +122,7 @@ Cuando se pida usuario/contraseña:
 
 Cada integrante del equipo debe de trabajar **en su propia rama** para asi mantener limpio el historial del proyecto y evitar problemas de integración de código.
 
-### 🧭 Guía rápida
+### Guía rápida 
 1. Actualiza tu rama local principal:
    ```bash
    git checkout main
@@ -130,6 +130,20 @@ Cada integrante del equipo debe de trabajar **en su propia rama** para asi mante
    git checkout -b <nombre_de_rama>
    
    *ejemplo: mariofonsecabranch*
+
+2. Para subir cambios nuevos deben subirlo con su rama
+   ```bash
+   git add .
+   git commit -m "Descripción breve del cambio que se hizo"
+   git push origin <nombre_de_rama>
+
+3. Una vez que hayas subido tus cambios. Crear un "Pull Request" en GitHub"
+
+    Entra a [GitHub > Pull requests](https://github.com/maurocastill/eq18_turkish_music_mlops/pulls).
+    Hacer click en el botón "New pull request"
+    Seleccionar base: development
+    Seleccionar compare: main
+    Hacer click en el botón "Create pull request"
 
 ---
 
