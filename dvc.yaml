@@ -10,3 +10,12 @@ stages:
       - models/preprocessor.pkl
       - models/label_encoder.pkl
       - reports/outlier_report.json
+  train:
+    cmd: python eq18_turkish_music_mlops/train.py --model logistic
+    deps:
+      - eq18_turkish_music_mlops/train.py
+      - data/processed/train.csv
+      - models/preprocessor.pkl
+    outs:
+      - models/model_logistic.pkl
+      - reports/train_results_logistic.json
