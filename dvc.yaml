@@ -1,0 +1,12 @@
+stages:
+  prepare:
+    cmd: python eq18_turkish_music_mlops/prepare.py
+    deps:
+      - data/raw/turkish_music_emotion_modified.csv
+      - eq18_turkish_music_mlops/prepare.py
+    outs:
+      - data/processed/train.csv
+      - data/processed/test.csv
+      - models/preprocessor.pkl
+      - models/label_encoder.pkl
+      - reports/outlier_report.json
