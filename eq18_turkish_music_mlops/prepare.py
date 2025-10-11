@@ -33,10 +33,10 @@ from sklearn.compose import ColumnTransformer
 # =========================
 # Parámetros generales
 # =========================
-RAW_DATA_PATH = "../data/raw/turkish_music_emotion_modified.csv"
-PROCESSED_DIR = "../data/processed"
-MODELS_DIR = "../models"
-REPORTS_DIR = "../reports"
+RAW_DATA_PATH = "data/raw/turkish_music_emotion_modified.csv"
+PROCESSED_DIR = "data/processed"
+MODELS_DIR = "models"
+REPORTS_DIR = "reports"
 
 TEST_SIZE = 0.2
 RANDOM_STATE = 42
