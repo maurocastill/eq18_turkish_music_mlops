@@ -139,11 +139,11 @@ Cada integrante del equipo debe de trabajar **en su propia rama** para asi mante
 
 3. Una vez que hayas subido tus cambios. Crear un "Pull Request" en GitHub"
 
-    Entra a [GitHub > Pull requests](https://github.com/maurocastill/eq18_turkish_music_mlops/pulls).
-    Hacer click en el botón "New pull request"
-    Seleccionar base: development
-    Seleccionar compare: main
-    Hacer click en el botón "Create pull request"
+    * Entra a [GitHub > Pull requests](https://github.com/maurocastill/eq18_turkish_music_mlops/pulls).
+    * Hacer click en el botón "New pull request"
+    * Seleccionar base: development
+    * Seleccionar compare: main
+    * Hacer click en el botón "Create pull request"
 
 ---
 
@@ -202,3 +202,11 @@ dvc pull
 Al terminar verás `data/raw/*.csv` descargados desde Azure.
 
 --------
+
+### 6. Agregar datos a DVC
+
+Ejecuta:
+
+```bash
+dvc push
+```
