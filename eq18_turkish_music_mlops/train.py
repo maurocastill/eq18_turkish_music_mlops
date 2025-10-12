@@ -72,8 +72,10 @@ def main(model_name):
     # --- Cargar preprocessor (solo referencia) ---
     preprocessor_path = models_dir / "preprocessor.pkl"
     if preprocessor_path.exists():
-        print("🔗 Cargando preprocessor (solo referencia)...")
-        preprocessor = joblib.load(preprocessor_path)
+        #print("🔗 Cargando preprocessor (solo referencia)...")
+        #preprocessor = joblib.load(preprocessor_path)
+        print("⚠️ Saltando carga de preprocessor (contiene clases personalizadas)...")
+        preprocessor = None
     else:
         print("⚠️ Advertencia: preprocessor.pkl no encontrado, continuaré sin él.")
 
