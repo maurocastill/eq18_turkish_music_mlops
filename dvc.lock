@@ -32,3 +32,27 @@ stages:
       hash: md5
       md5: 0abab8de32686ac8ab7d70e10a899462
       size: 1590
+  train:
+    cmd: python eq18_turkish_music_mlops/train.py --model logistic
+    deps:
+    - path: data/processed/train.csv
+      hash: md5
+      md5: 97599ac5c3542db4288e4ee082dd7f84
+      size: 316320
+    - path: eq18_turkish_music_mlops/train.py
+      hash: md5
+      md5: 4f998c436f6f95dcb6ac535f7922a5fe
+      size: 4284
+    - path: models/preprocessor.pkl
+      hash: md5
+      md5: ebf8900a12d550423ac6ded2de3a051d
+      size: 10243
+    outs:
+    - path: models/model_logistic.pkl
+      hash: md5
+      md5: e5045e21104e47619d64c92b8ccf808c
+      size: 3863
+    - path: reports/train_results_logistic.json
+      hash: md5
+      md5: b22c32c9cdd6e79bbef7d40a87d482f1
+      size: 171
